@@ -156,5 +156,23 @@ working directory, staging area, repository
 
 실무에서 --hard 옵션 같은 경우는 자주 사용되지 않는데, reset 시점 이후의 모든 자료가 사라져버리기 때문. 따라서, 모든 자료가 사라져도 괜찮은 상황이 아니라면 --soft, --mixed를 쓰는 게 권장 됩니당.
 
+직접 실습해본 바, 
+
+--soft -> git history 에서만 변화가 있다. 
+
+--mixed -> git history, git status 에서 변화가 있다.
+
+--hard -> git history, working directory 에서 변화가 있고, git status를 해도 바뀐 게 없다고 나온다. (그렇지 staging area도 그 커밋 기준으로 바뀌었으니까..)
+
+지워놓고 보니, 커밋 돌려놓고 싶다면? 깃허브 remote repository에서 가져오면 되지! -> git pull
+
+git push 자주자주 하쟈. 이게 백업으로서의 깃헙!
+
+11. HEAD를 기준으로 git reset하기
+
+매번 커밋 아이디로 reset 하기 귀찮은 당신을 위해!
+HEAD가 있는 커밋 바로 밑 커밋 지칭 - HEAD^
+HEAD가 있는 커밋 밑에서 n번째 지칭 - HEAD~n
+
 
 
