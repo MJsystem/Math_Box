@@ -8,7 +8,7 @@ def subtract(a, b):
 def multiply(a, b):
     return a * b
 
-def divide_premium(a, b):
+def divide_new(a, b):
     return a / b
 
 

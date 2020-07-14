@@ -50,3 +50,13 @@ master 브랜치에 있는 걸 premium 브랜치로 가져와야 겠군! -> git 
 : 현재 내가 있는 premium branch에 master branch를 합치겠다는 의미.
 
 이렇게 merge는 다른 브랜치에서 한 커밋을 이 브랜치로 가져오고 싶을 때 활용하는 것 -> 나도 이 강의 들으면서 필기한 md 파일들마다 매번 merge 조져야겠다.
+
+4. merge할 때 conflict가 날 수도 있어요!
+
+master branch 에서는 divide_free 로
+premium branch 에서는 divide_premium 으로 바꾸고 git merge master 했더니,
+conflict 발생! -> 그 파일로 가보면, current change 가 현재 있는 branch(이 상황에선 premium branch)에서 수정한 바이고, 밑에 있는 change가 merge 하려는 branch에서의 변동 사항
+
+git에서 이렇게 각기 다른 변화를 만나면 conflict. 어떤 변화를 반영할 것인지 사용자가 직접 정해주어야 함.
+
+둘 중에 하나를 정해도 되지만, 아예 다 지우고 새롭게 정보를 줘도 됨. Conflict는 그저 양쪽에 모두 변동 사항이 있어서 발생하는 것이기에.
