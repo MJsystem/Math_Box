@@ -20,3 +20,18 @@ HEAD -> master (여기서의 master 가 master branch)
 오 그렇게 하니까 원래 git에 맨날 뜨던 줄 (master) 가 (premium) 으로 바뀌네!!
 
 이제 작업을 하고 커밋을 하면 premium branch 에만 반영되는 것. master branch는 그대로야. 그러니까 기존에 있는 것들을 premium을 위해 바꿔도 되는 거지.
+
+2. 브랜치 다뤄보기
+   git branch -> 존재하는 브랜치 목록
+
+브랜치를 만들고 지워 보자.
+
+git branch test <- 이건 저번에 했었지>
+
+git branch -d test <- 옵션 d는 delete의 약자>
+
+test 사라짐 ㅅㄱ링
+
+Tip) 우리는 브랜치를 만들면 그 브랜치로 바로 이동하는 경우가 많은데, 이를 한 번에 하는 방법은 바로
+git checkout -b test
+-b 옵션은 branch의 약자. branch 하고 바로 checkout 하라는 의미가 된다.
