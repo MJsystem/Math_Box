@@ -21,6 +21,10 @@ HEAD -> master (여기서의 master 가 master branch)
 
 이제 작업을 하고 커밋을 하면 premium branch 에만 반영되는 것. master branch는 그대로야. 그러니까 기존에 있는 것들을 premium을 위해 바꿔도 되는 거지.
 
+License 파일 바꾸고 commit 해준 다음
+git checkout master 로 해서 다시 마스터 브랜치로 갔더니,
+원래의 License 그대로. 이게 브랜치구나 같은 프로젝트에서 다른 방향으로 만들어 나가는. (유료 버전, 무료 버전으로 나뭇가지 2개로 갈라진 것)
+
 2. 브랜치 다뤄보기
    git branch -> 존재하는 브랜치 목록
 
@@ -35,3 +39,12 @@ test 사라짐 ㅅㄱ링
 Tip) 우리는 브랜치를 만들면 그 브랜치로 바로 이동하는 경우가 많은데, 이를 한 번에 하는 방법은 바로
 git checkout -b test
 -b 옵션은 branch의 약자. branch 하고 바로 checkout 하라는 의미가 된다.
+
+3. 브랜치 merge 하기
+
+무료 버전에 기능을 추가했더니, 회사에서 무료 버전에 있는 기능은 무조건 유료 버전에 있어야 한다고 했다고 생각해보자.
+
+직접 무료 버전에 쓴 거 복사해서 유료 버전에 넣고 커밋해도 되겠지만, 깃에서는 한 브랜치에서 한 커밋을 그대로 다른 브랜치에 적용하는 기능이 있음 - branch merge
+
+master 브랜치에 있는 걸 premium 브랜치로 가져와야 겠군! -> git checkout premium -> git merge master
+: 현재 내가 있는 premium branch에 master branch를 합치겠다는 의미.
