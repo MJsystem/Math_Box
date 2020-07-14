@@ -48,3 +48,5 @@ git checkout -b test
 
 master 브랜치에 있는 걸 premium 브랜치로 가져와야 겠군! -> git checkout premium -> git merge master
 : 현재 내가 있는 premium branch에 master branch를 합치겠다는 의미.
+
+이렇게 merge는 다른 브랜치에서 한 커밋을 이 브랜치로 가져오고 싶을 때 활용하는 것 -> 나도 이 강의 들으면서 필기한 md 파일들마다 매번 merge 조져야겠다.
