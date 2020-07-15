@@ -60,3 +60,37 @@ conflict 발생! -> 그 파일로 가보면, current change 가 현재 있는 br
 git에서 이렇게 각기 다른 변화를 만나면 conflict. 어떤 변화를 반영할 것인지 사용자가 직접 정해주어야 함.
 
 둘 중에 하나를 정해도 되지만, 아예 다 지우고 새롭게 정보를 줘도 됨. Conflict는 그저 양쪽에 모두 변동 사항이 있어서 발생하는 것이기에.
+
+Conflict가 났다고 당황하지 말자. 자주 일어나는 일이니까
+
+-1 컨플릭트가 발생한 파일을 연다
+-2 merge의 결과가 되었으면 하는 모습대로 코드를 수정
+-3 커밋
+
+5. conflict가 났을 때, 일단 merge 취소할 수 있다!
+
+git merge --abort
+abort 옵션은 중단한다는 의미. git 사용하다보면 이 단어 자주 보이던데, 중단한다는 의미임.
+
+6. 용어 설명
+
+== git remote add origin https://github.com/kyuri-dev/Math_Box.git
+
+remote 레포지토리를 add (등록) 하겠다. origin이란 이름으로, 주소에 있는 리모트 레포지토리를.
+
+origin 이라고 하는 건 국룰. 이걸 나중에 clone해가고 쓰고 할 때 가장 근원이 되는 레포지토리라는 의미인 듯하다.
+
+== git push -u origin master
+
+push 하겠다. -u (set upstream) 옵션을 주어서 origin 이라는 이름의 remote 레포지토리에 master 라는 로컬 레포지토리의 커밋을!
+
+upstream 이란, track 하겠다는 의미임. >> git push 만 해도 알아서 로컬 master 브랜치에서 리모트 master 브랜치로 가는 거야. 브랜치끼리 추적을 하는 거지.
+
+== origin/master의 의미
+로컬 레포지토리의 master 브랜치 , 리모트 레포지토리의 master 브랜치
+이걸 구분해주는 건 이름
+
+로컬에서는 굳이 다른 게 필요 없이 그냥 master,
+리모트 거는 로컬에서 볼 때 이게 origin의 master 브랜치니까, origin/master
+
+git history 해보면 알 수 있다!
