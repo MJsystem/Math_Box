@@ -94,3 +94,15 @@ upstream 이란, track 하겠다는 의미임. >> git push 만 해도 알아서 
 리모트 거는 로컬에서 볼 때 이게 origin의 master 브랜치니까, origin/master
 
 git history 해보면 알 수 있다!
+
+7. 새로운 지식을 갖고 다시 살펴보는 git reset
+
+git reset을 하면 그 커밋으로 master 브랜치가 이동하고, 자연스럽게 그 브랜치를 가리키던 HEAD도 따라 가는 거임.
+
+그래서 git reset을 하면 HEAD가 가리키던 커밋이 바뀌는 거임. 그렇지 branch는 커밋을 가리키는 포인터이고, HEAD는 브랜치를 가리키는 녀석이니까. 저번 강의 기억하면서 !
+
+또한,
+git reset을 한다고 그 이후의 커밋이 사라지는 것은 아니다.
+커밋 히스토리에서 사라진다고 아예 사라지는 게 아니고 다시 git reset (현 커밋 이후의 커밋 아이디)를 통해서 갈 수 있음
+
+이제 git reset을 사용함으로써 커밋 사이를 자유자재로 이동할 수 있겠지?
